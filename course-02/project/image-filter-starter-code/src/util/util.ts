@@ -21,7 +21,7 @@ export async function filterImageFromURL(inputURL: string): Promise<string>{
             resolve(__dirname+outpath);
         });
         }catch(error) {
-            reject(error);
+            reject(error); // added reject to catch the invalid url
         }
     });
 }

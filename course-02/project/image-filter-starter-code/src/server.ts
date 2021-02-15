@@ -24,9 +24,8 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //    1. validate the image_url query
       const { image_url } = req.query;
   //    2. call filterImageFromURL(image_url) to filter the image
-  
       if (!image_url) {
-        return res.status(422).send("An image URL is required");
+        return res.status(422).send("An image URL is required!!!");
       }
  //    3. send the resulting file in the response 
   //    4. deletes any files on the server on finish of the response
@@ -38,7 +37,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
           deleteLocalFiles([filteredImg]);
         });
       } catch (error) {
-        res.status(406).send("Invalid URL");
+        res.status(406).send("Invalid URL!!");
       }
   // QUERY PARAMATERS
   //    image_url: URL of a publicly accessible image
