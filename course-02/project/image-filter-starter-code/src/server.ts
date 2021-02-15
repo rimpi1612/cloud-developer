@@ -27,7 +27,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       if (!image_url) {
         return res.status(422).send("An image URL is required");
       }
- //    3. send the resulting file in the response
+ //    3. send the resulting file in the response 
   //    4. deletes any files on the server on finish of the response
       try {
         const filteredImg = await filterImageFromURL(image_url);
