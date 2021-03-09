@@ -29,9 +29,10 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       }
       try {
         const filteredImg = await filterImageFromURL(image_url);
-  //    3. send the resulting file in the response
+  //    3. send the resulting file in the response 
+  // making branch and push
         res.status(200).sendFile(filteredImg, () => {
-  //    4. deletes any files on the server on finish of the response
+  //    4. deletes any files on the server on finish of the response 
           deleteLocalFiles([filteredImg]);
         });
       } catch (error) {
